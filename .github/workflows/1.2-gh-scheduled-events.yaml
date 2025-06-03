@@ -1,0 +1,16 @@
+name: Github Actions Scheduled Events
+on:
+  schedule:
+  - cron: '*/10 * * * *' # Runs every 10 minutes
+  workflow_dispatch:
+jobs:
+  run-scheduled-events:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Print event payload
+      run: |
+        echo "Event name: ${{ github.event_name }}"
+        echo "Event payload: ${{ toJson(github.event) }}"
