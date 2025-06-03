@@ -1,0 +1,18 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "github.copilot",
+        "yzhang.markdown-all-in-one",
+        "davidanson.vscode-markdownlint",
+        "streetsidesoftware.code-spell-checker",
+        "rosshamish.kuskus-kusto-syntax-highlighting",
+        "kennylong.kubernetes-yaml-formatter"
+      ]
+    },
+    "codespaces": {}
+  },
+  "postCreateCommand": "chmod +x .devcontainer/post-create-commands.sh && .devcontainer/post-create-commands.sh"
+}
