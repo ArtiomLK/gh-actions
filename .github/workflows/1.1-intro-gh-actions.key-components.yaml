@@ -1,5 +1,4 @@
 name: Starter GitHub Actions Workflow
-run-name: Starter GitHub Actions Workflow run-as
 
 on:
   workflow_dispatch:
