@@ -13,7 +13,7 @@ jobs:
     steps:
 
     - name: Issue Created
-      run:  echo "Issue created: ${{ github.event.issue.created_at }}"
+      run: echo "Issue created: ${{ github.event.issue.created_at }}"
 
     - name: Issue Closed
       if: github.event.action == 'closed'
