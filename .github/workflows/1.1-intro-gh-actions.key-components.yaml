@@ -2,7 +2,6 @@ name: Starter GitHub Actions Workflow
 
 on:
   workflow_dispatch:
-  push:
 
 
 jobs:
