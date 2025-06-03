@@ -8,7 +8,8 @@
         "yzhang.markdown-all-in-one",
         "davidanson.vscode-markdownlint",
         "streetsidesoftware.code-spell-checker",
-        "rosshamish.kuskus-kusto-syntax-highlighting"
+        "rosshamish.kuskus-kusto-syntax-highlighting",
+        "kennylong.kubernetes-yaml-formatter"
       ]
     },
     "codespaces": {}
