@@ -13,11 +13,11 @@ jobs:
     steps:
 
     - name: Issue Created
-      run:  echo "Issue created: ${{ github.event.issue.title }}"
+      run:  echo "Issue created: ${{ github.event.issue.created_at }}"
 
     - name: Issue Closed
       if: github.event.action == 'closed'
-      run: echo "Issue closed: ${{ github.event.issue.title }}"
+      run: echo "Issue closed: ${{ github.event.issue.created_at }}"
 
     - name: print push ref
       run: echo "Push ref: ${{ github.ref }}"
