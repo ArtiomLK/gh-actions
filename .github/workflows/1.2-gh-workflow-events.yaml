@@ -1,0 +1,29 @@
+name: Github Actions Workflow Events
+on:
+  workflow_dispatch:
+  issues:
+    types: [ opened, closed ]
+  push:
+    branches: [ main ]
+  pull_request:
+    types: [ opened ]
+
+jobs:
+  run-workflow-events:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Issue Created
+      run:  echo "Issue created: ${{ github.event.issue.title }}"
+
+    - name: Issue Closed
+      if: github.event.action == 'closed'
+      run: echo "Issue closed: ${{ github.event.issue.title }}"
+
+    - name: print push ref
+      run: echo "Push ref: ${{ github.ref }}"
+
+    - name: Print event payload
+      run: |
+        echo "Event name: ${{ github.event_name }}"
+        echo "Event payload: ${{ toJson(github.event) }}"
