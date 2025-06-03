@@ -1,0 +1,17 @@
+name: Starter GitHub Actions Workflow
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Run shell commands
+      run: |
+        echo "Hello, World!"
+        echo "This is a GitHub Actions workflow."
+        echo "You can customize this workflow to suit your needs."
+        echo "For more information, visit https://docs.github.com/en/actions"
