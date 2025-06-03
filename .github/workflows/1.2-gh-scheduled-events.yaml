@@ -1,8 +1,12 @@
 name: Github Actions Scheduled Events
+
 on:
   schedule:
   - cron: '*/10 * * * *' # Runs every 10 minutes
   workflow_dispatch:
+  push:
+
+
 jobs:
   run-scheduled-events:
     runs-on: ubuntu-latest
